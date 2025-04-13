@@ -10,7 +10,6 @@ export const RsvpManager: React.FC = () => {
   const [entries, setEntries] = useState(rsvpService.getAllEntries());
   const [confirmed, setConfirmed] = useState<Player[]>([]);
 
-
   const handleSubmit = () => {
     const player: Player = { id: name.toLowerCase(), name };
     rsvpService.addOrUpdateRsvp(player, status);
